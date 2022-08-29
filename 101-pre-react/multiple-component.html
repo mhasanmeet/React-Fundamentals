@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="main"></div>
+
+    <!-- React Core Library -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <!-- React DOM Library -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel Library -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- javaScript -->
+    <Script type="text/babel">
+
+        // We need to use variable name first character Capital, otherwise it will not work. It is convention
+        const MultipleComponent = () =>{
+            // Get data or make logic here
+            const date = new Date()
+            const year = date.getFullYear()
+
+            // to show browser we need to put things into return 
+            return(
+                <div>
+                    {/*We can use any JS method*/}
+                    <h1 className="msg"> {"Uppercase Title".toUpperCase()} </h1>
+                    <p>{year} | All right Reserved</p>
+                </div>
+            )
+        }
+
+        // get element into id(main)
+        ReactDOM.render(<MultipleComponent/>, document.getElementById('main'))
+    </Script>
+</body>
+</html>
