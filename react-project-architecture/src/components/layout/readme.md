@@ -1,0 +1,1 @@
+Global share layout component
